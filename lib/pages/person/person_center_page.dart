@@ -79,7 +79,9 @@ class PersonCenterPage extends StatelessWidget {
                 _divider(),
                 _dataSelect(),
                 _divider(),
-                _personItem('ic_me_journal.png', '我的发布'),
+                _personItem('ic_me_journal.png', '我的发布',onTab:(){
+
+                }),
                 _personItem('ic_me_follows.png', '我的关注'),
                 _personItem('ic_me_photo_album.png', '相册'),
                 _personItem('ic_me_doulist.png', '豆列 / 收藏'),
@@ -302,6 +304,7 @@ class _TabBarWidgetState extends State<_TabBarWidget> {
   @override
   void initState() {
     super.initState();
+    print('initSate TabBarWidgetState');
     selectColor = Colors.black;
     unselectedColor = Color.fromARGB(255, 117, 117, 117);
     selectStyle = TextStyle(fontSize: 18, color: selectColor);
